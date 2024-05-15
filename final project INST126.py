@@ -1,11 +1,12 @@
 import random
+import matplotlib.pyplot as plt
 
 def roll_dice():
-    ''''Simulate rolling three dice'''
+    '''Simulate rolling three dice'''
     return [random.randint(1,6) for _ in range(3)]
 
 def tupled_out(dice):
-    '''check if all the three dice have the same number'''
+    '''Check if all the three dice have the same number'''
     return len(set(dice)) == 1
 
 def fixed_dice(dice):
@@ -45,14 +46,30 @@ def main():
     num_players = int(input("Enter the number of players: "))
     scores = [0] * num_players
 
-    while max(scores) < 50: 
-        for player in range(num_players):
-            print(f"\nPlayer {player+1}'s turn:")
-            scores[player] += play_turn()
-            print("Current Scores:", scores)
-            if scores[player] >= 50:
-                print(f"Player {player+1} wins!")
-                break
+# insert a Data Frame in order to save scores
+scores_df = pd.DataFrame(index= range(1,num_players + 1), columns=['Turn', 'Score'])
+    
+while  max(scores_df['Score']) < 50:
+    for player in range(1, num_players + 1):
+        print(f"\nPlayer {player}'s turn:")
+        score = play_turn()
+        scores_df.loc[player, 'Turn'] += 1
+        scores_df.loc[player, 'Score'] += score
+        print("Current Scores: \n", scores)
+        if scores_df.loc[player,'Score'] >= 50:
+            print(f"Player {player} wins!")
+            break
+
+# Plot the scores of each of the players
+for player in range (1, num_players + 1):
+    plt.plot(scores_df.loc[player, 'Turn'], scores_df.loc[player, 'Score'], label=f'Player {player}')
+
+plt.xlabel('Turn')
+plt.ylabel('Score')
+plt.title('Game Progression')
+plt.legend()
+plt.show()
+
 if __name__ == "__main__":
     main()
 
