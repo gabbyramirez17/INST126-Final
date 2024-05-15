@@ -1,0 +1,20 @@
+# INST126-Final
+#README
+readme_content
+
+Introduction to the 'Tuple Out Dice Game'
+
+ In this project, I've implemented a simulation of a simple dice game called "Tuple Out"
+
+Game Rules
++ Each turn, the player rolls three dice.
++ If all three dice show the same number, the player "tuples out" and ends their turn with zero points"
++ If two dice have the same value, those are "fixed" and can't re-rolled
++ The player can re-roll any dice that are not "fixed" and they can do so until they decided to stop or they "tuple out"
++ When the player decides to stop, they score points equal to the total of the three dice added together, and their turn ends.
+
+Requirements:
++ Python 3.11.5 
+
+Usage:
++ 1. to 
