@@ -19,8 +19,9 @@ Requirements:
 How to Play!
 + Setting up your system:
 + -  Make sure you have Python 3.11.5 installed on your system.
-  - Make sure you have Panda Library downloaded 
-  - Make sure you have Matplotlib downloaded
+  - Make sure you have Panda Library downloaded (pip install pandas)
+  - Make sure you have Matplotlib downloaded (pip install matplotlib)
+  - IMPORTANT: These all are required packages needed to create the code and run it!
 + Running the game:
 +   open the 'final inst project.py"
 
@@ -31,7 +32,8 @@ How to Play!
     -  If two dice show the same number, the player has the option to re-roll the third die.
     -  The player can choose to stop rolling at any time and score points equal to the sum of the three dice.
     -  The game continues until one player reaches a score of 50 or more.
-    -  The player with the highest score wins the game. 
+    -  The player with the highest score wins the game.
+    -  After the game is finished, a graph will pop up plotting the score throughout the game between the players.
 
 Contributors I would like to thank! : 
 + To Rukayat Fakoya, for the paired programming session and the Code Review! In this session, we wanted to explain our projects to each other so that we had a basis for what our end result should look like. We wanted to get a different perspective on what to keep and delete from our first consolidation project and how to build up from that. 
