@@ -45,31 +45,35 @@ def play_turn():
 def main():
     print("Welcome to Tuple Out Dice Game!")
     num_players = int(input("Enter the number of players: "))
-    scores = [0] * num_players 
-
-# insert a Data Frame in order to save scores
-scores_df = pd.DataFrame(index= range(1,num_players + 1), columns=['Turn', 'Score'])
-    
-while  max(scores_df['Score']) < 50:
-    for player in range(1, num_players + 1):
-        print(f"\nPlayer {player}'s turn:")
-        score = play_turn()
-        scores_df.loc[player, 'Turn'] += 1
-        scores_df.loc[player, 'Score'] += score
-        print("Current Scores: \n", scores)
-        if scores_df.loc[player,'Score'] >= 50:
-            print(f"Player {player} wins!")
-            break
+    # A dictionary to hold player scores
+    all_scores = {"Player" : [num for num in range(1, num_players + 1)],
+                  "Turn" : [0] * num_players,
+                  "Score" : [0] * num_players }
+    current_turn = 0 
+    while max(all_scores['Score'] < 50:
+        current_turn += 1
+        for player in range(1, num_players + 1):
+            print(f"\nPlayer {player}'s turn:")
+            turn_score = play_turn()
+            all_scores['Player'].append(player)
+            all_scores['Turn'].append(current_turn)
+            cumulative_score = all_scores['Score'][-1 * num_players] + turn_score
+            all_scores['Score'].append(cumulative_score)
+             #print("Current Scores: \n", all_scores)
+            if cumulative_score >= 50:
+                print(f"Player {player} wins!")
+                break
+    scores_df = pd.DataFrame(all_scores)
 
 # Plot the scores of each of the players
-for player in range (1, num_players + 1):
-    plt.plot(scores_df.loc[player, 'Turn'], scores_df.loc[player, 'Score'], label=f'Player {player}')
-
-plt.xlabel('Turn')
-plt.ylabel('Score')
-plt.title('Game Progression')
-plt.legend()
-plt.show()
+    for player in range (1, num_players + 1):
+        plt.plot(scores_df.loc[scores_df["Player"] == player,'Turn'],
+                 scores_df.loc[scores_df["Player"] == player,'Score'])
+    plt.xlabel('Turn')
+    plt.ylabel('Score')
+    plt.title('Game Progression')
+    plt.legend()
+    plt.show()
 
 if __name__ == "__main__":
     main()
