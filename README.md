@@ -15,9 +15,7 @@ Requirements:
 + Python 3.11.5
 + panda library
 + matplotlib
-
-Usage:
-
+  
 Contributors I would like to thank! : 
 + To Rukayat Fakoya, for the paired programming session! In this session, we wanted to explain our projects to each other so that we had a basis for what our end result should look like. We wanted to get a different perspective on what to keep and delete from our first consolidation project and how to build up from that. 
 + To Ines Zheng, for the paired programming session! We focused on making sure that each other's code had a good foundation to keep adding on to. We also reviewed the goals we wanted to accomplish with our code and overall final project while making sure we were meeting the criteria for each other's project.
