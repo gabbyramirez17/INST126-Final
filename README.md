@@ -23,7 +23,8 @@ How to Play!
   - Make sure you have Matplotlib downloaded (pip install matplotlib)
   - IMPORTANT: These all are required packages needed to create the code and run it!
 + Running the game:
-+   open the 'final inst project.py"
++   Open & run the 'final inst project.py"
++   After that, the game will begin!
 
 +   Game:
 +   -  enter the number of players when prompted
