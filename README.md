@@ -25,13 +25,13 @@ How to Play!
 +   open the 'final inst project.py"
 
 +   Game:
--  enter the number of players when prompted
--  each player takes turns rolling 3 dice
--  If all three dice show the same number, the player "tuples out" and scores zero points for that turn.
--  If two dice show the same number, the player has the option to re-roll the third die.
--  The player can choose to stop rolling at any time and score points equal to the sum of the three dice.
--  The game continues until one player reaches a score of 50 or more.
--  The player with the highest score wins the game. 
++   -  enter the number of players when prompted
+    -  each player takes turns rolling 3 dice
+    -  If all three dice show the same number, the player "tuples out" and scores zero points for that turn.
+    -  If two dice show the same number, the player has the option to re-roll the third die.
+    -  The player can choose to stop rolling at any time and score points equal to the sum of the three dice.
+    -  The game continues until one player reaches a score of 50 or more.
+    -  The player with the highest score wins the game. 
 
 Contributors I would like to thank! : 
 + To Rukayat Fakoya, for the paired programming session and the Code Review! In this session, we wanted to explain our projects to each other so that we had a basis for what our end result should look like. We wanted to get a different perspective on what to keep and delete from our first consolidation project and how to build up from that. 
