@@ -50,7 +50,7 @@ def main():
                   "Turn" : [0] * num_players,
                   "Score" : [0] * num_players }
     current_turn = 0 
-    while max(all_scores['Score'] < 50:
+    while max(all_scores['Score']) < 50:
         current_turn += 1
         for player in range(1, num_players + 1):
             print(f"\nPlayer {player}'s turn:")
